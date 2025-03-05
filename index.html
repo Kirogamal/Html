@@ -1,0 +1,499 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All HTML & HTML5 Tags Showcase</title>
+    <style>
+      /* Global Styles */
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff; /* White background */
+        color: #2c3e50; /* Dark blue text */
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      /* Wrapper to center content */
+      .wrapper {
+        max-width: 1200px; /* Adjust as needed */
+        margin: 0 auto; /* Center the wrapper */
+        padding: 20px;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: #3498db; /* Blue headings */
+      }
+
+      a {
+        color: #3498db; /* Blue links */
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      /* Header Styles */
+      header {
+        background-color: #3498db; /* Blue header */
+        color: #ffffff; /* White text */
+        padding: 20px;
+        text-align: center;
+        animation: fadeInDown 1s ease-in-out;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+        animation: bounce 2s infinite;
+      }
+
+      nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0 0;
+      }
+
+      nav ul li {
+        display: inline;
+        margin-right: 15px;
+      }
+
+      nav ul li a {
+        color: #ffffff; /* White navigation links */
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
+
+      nav ul li a:hover {
+        color: #f1c40f; /* Yellow hover for contrast */
+      }
+
+      /* Section Styles */
+      section {
+        padding: 20px;
+        margin: 20px 0; /* Adjusted margin */
+        background-color: #ffffff; /* White sections */
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2); /* Blue shadow */
+        animation: fadeInUp 1s ease-in-out;
+      }
+
+      section h2 {
+        border-bottom: 2px solid #3498db; /* Blue border */
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        animation: slideInLeft 1s ease-in-out;
+      }
+
+      /* Form Styles */
+      form label {
+        display: block;
+        margin-bottom: 10px;
+        color: #2c3e50; /* Dark blue text */
+      }
+
+      form input[type="text"],
+      form input[type="email"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #3498db; /* Blue border */
+        border-radius: 4px;
+        background-color: #ffffff; /* White background */
+      }
+
+      form input[type="submit"] {
+        background-color: #3498db; /* Blue button */
+        color: #ffffff; /* White text */
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      form input[type="submit"]:hover {
+        background-color: #2980b9; /* Darker blue on hover */
+      }
+
+      /* Table Styles */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        background-color: #ffffff; /* White background */
+        border-radius: 8px;
+        overflow: hidden;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      table th,
+      table td {
+        padding: 10px;
+        border: 1px solid #3498db; /* Blue border */
+        text-align: left;
+        color: #2c3e50; /* Dark blue text */
+      }
+
+      table th {
+        background-color: #3498db; /* Blue header */
+        color: #ffffff; /* White text */
+      }
+
+      /* Media Styles */
+      img,
+      video,
+      audio,
+      iframe {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      /* Canvas Styles */
+      canvas {
+        border: 1px solid #3498db; /* Blue border */
+        background-color: #ffffff; /* White background */
+        margin-bottom: 20px;
+        border-radius: 8px;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      /* Footer Styles */
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #3498db; /* Blue footer */
+        color: #ffffff; /* White text */
+        margin-top: 20px;
+        animation: fadeInUp 1s ease-in-out;
+      }
+
+      /* Interactive Elements */
+      button {
+        background-color: #3498db; /* Blue button */
+        color: #ffffff; /* White text */
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        animation: pulse 2s infinite;
+      }
+
+      button:hover {
+        background-color: #2980b9; /* Darker blue on hover */
+      }
+
+      details {
+        margin-bottom: 20px;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      details summary {
+        font-weight: bold;
+        cursor: pointer;
+        color: #3498db; /* Blue summary */
+      }
+
+      dialog {
+        border: none;
+        border-radius: 8px;
+        padding: 20px;
+        background-color: #ffffff; /* White background */
+        color: #2c3e50; /* Dark blue text */
+        box-shadow: 0 4px 15px rgba(52, 152, 219, 0.2); /* Blue shadow */
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      dialog::backdrop {
+        background-color: rgba(52, 152, 219, 0.5); /* Blue backdrop */
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeInDown {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-20px);
+        }
+        60% {
+          transform: translateY(-10px);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>All HTML & HTML5 Tags Showcase</h1>
+        <nav>
+          <ul>
+            <li><a href="#text">Text</a></li>
+            <li><a href="#forms">Forms</a></li>
+            <li><a href="#tables">Tables</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#graphics">Graphics</a></li>
+            <li><a href="#semantic">Semantic</a></li>
+            <li><a href="#interactive">Interactive</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section id="text">
+        <h2>Text Elements</h2>
+        <p>
+          This is a <mark>highlighted</mark> paragraph with
+          <abbr title="HyperText Markup Language">HTML</abbr>.
+        </p>
+        <blockquote>“This is a blockquote.”</blockquote>
+        <address>Contact: example@email.com</address>
+        <bdi>مرحبا</bdi> <bdo dir="rtl">Text in RTL</bdo>
+        <ruby>漢 <rt>kan</rt> 字 <rt>ji</rt></ruby>
+        <p><cite>The Scream</cite> by Edvard Munch.</p>
+        <p><code>console.log("Hello, World!");</code></p>
+        <p><data value="123">Product ID: 123</data></p>
+        <p><dfn>HTML</dfn> is the standard markup language for web pages.</p>
+        <p><em>Emphasized text</em></p>
+        <p><i>Italic text</i></p>
+        <p><kbd>Ctrl + C</kbd> to copy.</p>
+        <p><samp>Sample output</samp></p>
+        <p><strong>Strong text</strong></p>
+        <p><sub>Subscript</sub> and <sup>Superscript</sup></p>
+        <p><time datetime="2023-10-01">October 1, 2023</time></p>
+        <p><u>Underlined text</u></p>
+        <p><var>Variable</var></p>
+        <p><wbr>Word<wbr>Break</wbr></p>
+      </section>
+
+      <section id="forms">
+        <h2>Forms</h2>
+        <form>
+          <label>Name: <input type="text" /></label>
+          <label>Email: <input type="email" /></label>
+          <label>Password: <input type="password" /></label>
+          <label>Age: <input type="number" /></label>
+          <label>Date: <input type="date" /></label>
+          <label>Color: <input type="color" /></label>
+          <label>File: <input type="file" /></label>
+          <label>Range: <input type="range" /></label>
+          <label>Search: <input type="search" /></label>
+          <label>Tel: <input type="tel" /></label>
+          <label>Time: <input type="time" /></label>
+          <label>URL: <input type="url" /></label>
+          <label>Checkbox: <input type="checkbox" /></label>
+          <label>Radio: <input type="radio" /></label>
+          <label>Select:
+            <select>
+              <option>Option 1</option>
+              <option>Option 2</option>
+            </select>
+          </label>
+          <label>Textarea: <textarea></textarea></label>
+          <input type="submit" value="Submit" />
+          <progress value="70" max="100"></progress>
+          <meter value="3" min="0" max="5">3/5</meter>
+        </form>
+      </section>
+
+      <section id="tables">
+        <h2>Tables</h2>
+        <table border="1">
+          <caption>Sample Table</caption>
+          <thead>
+            <tr>
+              <th>Header 1</th>
+              <th>Header 2</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Data 1</td>
+              <td>Data 2</td>
+            </tr>
+            <tr>
+              <td>Data 3</td>
+              <td>Data 4</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>Footer 1</td>
+              <td>Footer 2</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+
+      <section id="media">
+        <h2>Media</h2>
+        <img src="image.jpg" alt="Example" />
+        <video controls><source src="video.mp4" type="video/mp4" /></video>
+        <audio controls><source src="audio.mp3" type="audio/mpeg" /></audio>
+        <iframe
+          width="300"
+          height="200"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        ></iframe>
+        <picture>
+          <source srcset="image.webp" type="image/webp" />
+          <img src="image.jpg" alt="Example" />
+        </picture>
+        <figure>
+          <img src="image.jpg" alt="Example" />
+          <figcaption>Caption</figcaption>
+        </figure>
+      </section>
+
+      <section id="graphics">
+        <h2>Graphics</h2>
+        <svg width="100" height="100">
+          <circle
+            cx="50"
+            cy="50"
+            r="40"
+            stroke="#3498db"
+            stroke-width="3"
+            fill="#ffffff"
+          />
+        </svg>
+        <canvas id="myCanvas" width="200" height="100"></canvas>
+      </section>
+
+      <section id="semantic">
+        <h2>Semantic Elements</h2>
+        <article>
+          <h3>Article</h3>
+          <p>Content inside an article.</p>
+        </article>
+        <aside>
+          <h3>Sidebar</h3>
+          <p>Related info.</p>
+        </aside>
+        <section>
+          <h3>Section</h3>
+          <p>General section.</p>
+        </section>
+        <figure>
+          <img src="image.jpg" />
+          <figcaption>Caption</figcaption>
+        </figure>
+        <main>
+          <p>Main content area.</p>
+        </main>
+        <details>
+          <summary>More Info</summary>
+          <p>Extra details.</p>
+        </details>
+        <dialog open>This is a dialog.</dialog>
+      </section>
+
+      <section id="interactive">
+        <h2>Interactive Elements</h2>
+        <button onclick="alert('Clicked!')">Click Me</button>
+        <details>
+          <summary>More Info</summary>
+          <p>Extra details.</p>
+        </details>
+        <dialog open>This is a dialog.</dialog>
+        <menu>
+          <li>Menu Item 1</li>
+          <li>Menu Item 2</li>
+        </menu>
+        <menuitem>Menu Item</menuitem>
+      </section>
+
+      <footer><p>&copy; 2025 HTML Showcase</p></footer>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("JavaScript Loaded!");
+
+        // Canvas Drawing Example
+        let canvas = document.getElementById("myCanvas");
+        let ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#3498db"; // Blue fill
+        ctx.fillRect(20, 20, 150, 75);
+
+        // Add interactivity to the dialog
+        const dialog = document.querySelector("dialog");
+        const button = document.querySelector("button");
+
+        button.addEventListener("click", () => {
+          dialog.showModal();
+        });
+      });
+    </script>
+  </body>
+</html>
